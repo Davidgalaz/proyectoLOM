@@ -1,0 +1,219 @@
+<div class="p-1">
+    <p><b>Be careful, you only have one attempt</b> to save the human race. Make sure you have answered all the answers correctly before submitting it.</p>
+    <p>Good luck, humanity is with you!</p>
+</div>
+<div class="form">
+    <!-- Question 1 --> 
+    <div>
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <b>Question #1</b>
+                </mat-panel-title>
+                <mat-panel-description [ngClass]="{'red-text': question1.value === '', 'green-text' : question1.value !== ''}"></mat-panel-description>
+                </mat-expansion-panel-header>
+                <h4>What music band created the song "Yesterday"?</h4> 
+                <mat-form-field class="example-form-field" appearance="fill">
+                    <mat-label>Band</mat-label>
+                    <input matInput type="text" #question1>
+                </mat-form-field>
+            </mat-expansion-panel>
+        </mat-accordion>        
+    </div>
+    <!-- Question 1 --> 
+    <!-- Question 2 --> 
+    <div>
+        <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <b>Question #2</b>
+                </mat-panel-title>
+                <mat-panel-description [ngClass]="{'red-text': question2 === '', 'green-text' : question2 !== ''}"></mat-panel-description>
+              </mat-expansion-panel-header>
+              <label id="example-radio-group-label">What is the best friend of the human being?</label>
+              <mat-radio-group
+                    aria-labelledby="example-radio-group-label"
+                    class="example-radio-group"
+                    [(ngModel)]="question2">
+                    <mat-radio-button class="example-radio-button" *ngFor="let animal of animals" [value]="animal">
+                        {{animal}}
+                    </mat-radio-button>
+                </mat-radio-group>
+            </mat-expansion-panel>
+        </mat-accordion>        
+    </div>
+    <!-- Question 2 --> 
+    <!-- Question 3 --> 
+    <div>
+        <mat-accordion>
+            <mat-expansion-panel (click)="changeStatus(3)">
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <b>Question #3</b>
+                </mat-panel-title>
+                <mat-panel-description [ngClass]="{'red-text': answered3 === false, 'green-text' : answered3 !== false}"></mat-panel-description>
+                </mat-expansion-panel-header>
+                <section class="example-section" [formGroup]="question3">
+                    <h4>Which of the following numbers are odd?</h4>
+                    <span class="pr-1"><mat-checkbox formControlName="two">2</mat-checkbox></span>
+                    <span class="pr-1"><mat-checkbox formControlName="five">5</mat-checkbox></span>
+                    <span class="pr-1"><mat-checkbox formControlName="seventeen">17</mat-checkbox></span>
+                    <span><mat-checkbox formControlName="twenty">20</mat-checkbox></span>
+                </section>
+            </mat-expansion-panel>
+        </mat-accordion>         
+    </div>
+    <!-- Question 3 --> 
+    <!-- Question 4 --> 
+    <div>
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <b>Question #4</b>
+                </mat-panel-title>
+                <mat-panel-description [ngClass]="{'red-text': question4.value === undefined, 'green-text' : question4.value !== undefined}"></mat-panel-description>
+                </mat-expansion-panel-header>
+                <h4>In what month does the year start?</h4>
+                <mat-form-field appearance="fill">
+                    <mat-label>Month</mat-label>
+                    <mat-select #question4>
+                        <mat-option value="january">January</mat-option>
+                        <mat-option value="may">May</mat-option>
+                        <mat-option value="june">June</mat-option>
+                        <mat-option value="september">September</mat-option>
+                        <mat-option value="november">November</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </mat-expansion-panel>
+        </mat-accordion>        
+    </div>
+    <!-- Question 4 --> 
+    <!-- Question 5 --> 
+    <div>
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <b>Question #5</b>
+                </mat-panel-title>
+                <mat-panel-description [ngClass]="{'red-text': question5.value === '', 'green-text' : question5.value !== ''}"></mat-panel-description>
+                </mat-expansion-panel-header>
+                <h4>What is the name of our planet?</h4>
+                <mat-form-field class="example-form-field" appearance="fill">
+                    <mat-label>Planet</mat-label>
+                    <input matInput type="text" #question5>
+                </mat-form-field>
+            </mat-expansion-panel>
+        </mat-accordion>   
+    </div>
+    <!-- Question 5 --> 
+    <!-- Question 6 --> 
+    <div>
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <b>Question #6</b>
+                </mat-panel-title>
+                <mat-panel-description [ngClass]="{'red-text': question6 === '', 'green-text' : question6 !== ''}"></mat-panel-description>
+                </mat-expansion-panel-header>
+                <label id="example-radio-group-label">Where is the Taj Mahal, one of the seven wonders of the world?</label>
+                <mat-radio-group
+                    aria-labelledby="example-radio-group-label"
+                    class="example-radio-group"
+                    [(ngModel)]="question6">
+                    <mat-radio-button class="example-radio-button" *ngFor="let place of placesList" [value]="place">
+                        {{place}}
+                    </mat-radio-button>
+                </mat-radio-group>
+            </mat-expansion-panel>
+        </mat-accordion>          
+    </div>
+    <!-- Question 6 --> 
+    <!-- Question 7 --> 
+    <div>
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <b>Question #7</b>
+                </mat-panel-title>
+                <mat-panel-description [ngClass]="{'red-text': question7.value === undefined, 'green-text' : question7.value !== undefined}"></mat-panel-description>
+                </mat-expansion-panel-header>
+                <h4>In which country is the Riviera Maya located?</h4>
+                <mat-form-field appearance="fill">
+                    <mat-label>Location</mat-label>
+                    <mat-select #question7>
+                        <mat-option value="europe">Europe</mat-option>
+                        <mat-option value="mexico">Mexico</mat-option>
+                        <mat-option value="asia">Asia</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </mat-expansion-panel>
+        </mat-accordion>          
+    </div>
+    <!-- Question 7 --> 
+    <!-- Question 8 --> 
+    <div>
+        <mat-accordion>
+            <mat-expansion-panel (click)="changeStatus(8)">
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <b>Question #8</b>
+                </mat-panel-title>
+                <mat-panel-description [ngClass]="{'red-text': answered8 === false, 'green-text' : answered8 !== false}"></mat-panel-description>
+                </mat-expansion-panel-header>
+                <section class="example-section" [formGroup]="question8">
+                    <h4>Which of the following options are senses of the human being that machines will never be able to experience, which makes us unique?</h4>
+                    <span class="pr-1"><mat-checkbox formControlName="sight">Sight</mat-checkbox></span>
+                    <span class="pr-1"><mat-checkbox formControlName="taste">Taste</mat-checkbox></span>
+                    <span class="pr-1"><mat-checkbox formControlName="fly">Fly</mat-checkbox></span>
+                    <span class="pr-1"><mat-checkbox formControlName="electricity">Electricity</mat-checkbox></span>
+                    <span><mat-checkbox formControlName="sound">Sound</mat-checkbox></span>
+                </section>
+            </mat-expansion-panel>
+        </mat-accordion>         
+    </div>
+    <!-- Question 8 --> 
+    <!-- Question 9 --> 
+    <div>
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <b>Question #9</b>
+                </mat-panel-title>
+                <mat-panel-description [ngClass]="{'red-text': question9.value === '',  'green-text' : question9.value !== ''}"></mat-panel-description>
+                </mat-expansion-panel-header>
+                <h4>Who is the author of 'El Quijote'?</h4>
+                <mat-form-field class="example-form-field" appearance="fill">
+                    <mat-label>Author</mat-label>
+                    <input matInput type="text" #question9>
+                </mat-form-field>
+            </mat-expansion-panel>
+        </mat-accordion>          
+    </div>
+    <!-- Question 9 --> 
+    <!-- Question 10 --> 
+    <div>
+        <mat-accordion>
+            <mat-expansion-panel (click)="changeStatus(10)">
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <b>Question #10</b>
+                </mat-panel-title>
+                <mat-panel-description [ngClass]="{'red-text': answered10 === false, 'green-text' : answered10 !== false}"></mat-panel-description>
+                </mat-expansion-panel-header>
+                <h4>Activate the following button so that LOM realizes that we deserve a second chance!</h4>
+                <mat-slide-toggle #question10>Humans rocks!</mat-slide-toggle>
+            </mat-expansion-panel>
+        </mat-accordion>            
+    </div>
+    <!-- Question 10 --> 
+    <div class="example-button-row" [matTooltip]="disable ? 'You only had one attempt!' : ''">
+      <button mat-raised-button color="primary" [disabled]="disable" (click)="send(question1.value, question2, question3.value, question4.value, question5.value, question6, question7.value, question8.value, question9.value, question10.checked)">Send</button>
+    </div>
+</div>

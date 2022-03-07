@@ -1,0 +1,13 @@
+<div>
+    <div class="p-1">
+        <h1 class="text-center">Help, 2050 needs you!</h1>
+        <hr>
+        <p>Yes, you read that right, <b>I am writing to you from the year 2050</b>, like Marty McFly in Back to the Future. We thought that nothing worse than Covid-19 could happen in 2020, but a decade later the machines rose up and humanity has been fighting them for the last two decades.</p>
+        <p>There are hardly any human beings left on the face of the Earth, but <b>we have one last chance!</b> The leader of the machines asks us for proof of the worth of the human race, so you have to answer the following questions to give us a second chance.</p>
+        <h2>The future of the human being is in your hands!</h2>
+    </div>
+    <div class="example-button-row" *ngIf="show">
+        <button mat-raised-button color="primary" (click)="goToPage()">Save the humanity!</button>
+    </div>
+</div>
+<router-outlet></router-outlet>
